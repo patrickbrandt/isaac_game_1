@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac's Board Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Setup Screen -->
+    <div id="setup-screen" class="screen">
+        <h1>Isaac's Board Game</h1>
+        <div class="setup-container">
+            <h2>How many players?</h2>
+            <div class="player-count-buttons">
+                <button onclick="setPlayerCount(2)">2 Players</button>
+                <button onclick="setPlayerCount(3)">3 Players</button>
+                <button onclick="setPlayerCount(4)">4 Players</button>
+            </div>
+            <div id="player-names" class="player-names"></div>
+            <button id="start-game-btn" class="start-btn" onclick="startGame()" style="display: none;">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <header>
+            <h1>Isaac's Board Game</h1>
+            <div class="turn-info">
+                <span id="current-player-name">Player 1</span>'s Turn
+                <span class="actions-left">Actions Left: <span id="actions-remaining">3</span></span>
+            </div>
+        </header>
+
+        <main class="game-board">
+            <!-- Chests Section -->
+            <section class="chests-section">
+                <div class="chest" id="chest-1">
+                    <h3>Chest 1</h3>
+                    <p class="chest-cost">1 Key</p>
+                    <p class="chest-reward">50-100 pts</p>
+                    <button onclick="openChest(1)" class="chest-btn">Open</button>
+                </div>
+                <div class="chest" id="chest-2">
+                    <h3>Chest 2</h3>
+                    <p class="chest-cost">2 Keys</p>
+                    <p class="chest-reward">150-200 pts</p>
+                    <button onclick="openChest(2)" class="chest-btn">Open</button>
+                </div>
+                <div class="chest" id="chest-3">
+                    <h3>Chest 3</h3>
+                    <p class="chest-cost">3 Keys</p>
+                    <p class="chest-reward">250-300 pts</p>
+                    <button onclick="openChest(3)" class="chest-btn">Open</button>
+                </div>
+            </section>
+
+            <!-- Wheel of Fortune Section -->
+            <section class="wheel-section">
+                <h2>Wheel of Fortune</h2>
+                <div class="wheel-outcomes">
+                    <span class="outcome">1: 100pts</span>
+                    <span class="outcome">2: Key</span>
+                    <span class="outcome">3: Nothing</span>
+                    <span class="outcome">4: 50pts</span>
+                    <span class="outcome">5: 10pts</span>
+                    <span class="outcome">6: 50pts</span>
+                    <span class="outcome">7: 5 coins</span>
+                    <span class="outcome">8: 50pts</span>
+                    <span class="outcome">9: 500pts</span>
+                    <span class="outcome">10: 5 keys</span>
+                    <span class="outcome">11: 100pts</span>
+                    <span class="outcome">12: 3 tickets</span>
+                </div>
+                <button onclick="spinWheel()" class="spin-btn">Spin Wheel (1 Ticket)</button>
+                <div id="wheel-result" class="wheel-result"></div>
+            </section>
+
+            <!-- Shop Section -->
+            <section class="shop-section">
+                <h2>Shop</h2>
+                <div class="shop-items">
+                    <button onclick="buyKey()" class="shop-btn">Buy Key - 50 coins</button>
+                    <button onclick="buyTicket()" class="shop-btn">Buy Ticket - 50 coins</button>
+                </div>
+            </section>
+
+            <!-- Question Section -->
+            <section class="question-section">
+                <h2>Math Question</h2>
+                <div id="question-area">
+                    <p id="question-text">Click "Answer Question" to get a question!</p>
+                    <div id="answer-area" style="display: none;">
+                        <input type="number" id="answer-input" placeholder="Your answer">
+                        <button onclick="submitAnswer()" class="submit-btn">Submit</button>
+                    </div>
+                    <button id="get-question-btn" onclick="getQuestion()" class="question-btn">Answer Question</button>
+                </div>
+                <div id="question-result" class="question-result"></div>
+            </section>
+
+            <!-- End Turn Button -->
+            <section class="turn-section">
+                <button onclick="endTurn()" class="end-turn-btn">End Turn</button>
+            </section>
+
+            <!-- Players Section -->
+            <section class="players-section">
+                <div id="players-container"></div>
+            </section>
+        </main>
+
+        <!-- Message Display -->
+        <div id="game-message" class="game-message"></div>
+    </div>
+
+    <!-- Win Screen -->
+    <div id="win-screen" class="screen" style="display: none;">
+        <div class="win-container">
+            <h1>Winner!</h1>
+            <p id="winner-name"></p>
+            <p id="winner-score"></p>
+            <button onclick="newGame()" class="new-game-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

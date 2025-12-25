@@ -99,7 +99,17 @@ Here's how we worked through understanding the game rules:
 
 > Each player gets 3 actions on their turn. An action is either answering a question, buying something in the shop, opening a chest, or spinning the wheel of fortune.
 
-From this conversation, Claude Code generated a complete implementation plan and then built the entire game - HTML structure, CSS styling, and JavaScript game logic - all in one session.
+### The Implementation Plan
+
+Before writing any code, Claude Code created a detailed implementation plan based on the Q&A session. This plan documented all game mechanics, outlined the technical approach, defined the file structure, and broke the work into phases.
+
+Having a plan before coding ensured nothing was missed and provided a clear roadmap for building the game.
+
+**[View the full implementation plan (plan.md)](plan.md)**
+
+### Building the Game
+
+From the plan, Claude Code built the entire game - HTML structure, CSS styling, and JavaScript game logic - all in one session.
 
 ---
 

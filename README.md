@@ -71,51 +71,37 @@ This game started as a hand-drawn board game created by Isaac, a 10-year-old gam
 
 Here's how we worked through understanding the game rules:
 
----
-
 **Q: What's the goal of the game?**
 
 > The goal of the game is to get to 1000 points. Players answer questions to earn coins to spend in the shop to buy keys to open chests that can earn more points, or buy a ticket to spin the wheel of fortune. The chest and the wheel give you points. Players take turns one at a time, clockwise.
-
----
 
 **Q: What kind of questions do players answer? And how many coins do you earn for a correct answer?**
 
 > Players answer math questions. You earn 50 coins for answering a math question correctly.
 
----
-
 **Q: What do items cost in the shop?**
 
 > 1 ticket is 50 coins, 1 key is 50 coins.
-
----
 
 **Q: Do all 3 chests give the same rewards?**
 
 > Different amounts. The first chest requires 1 key, the second 2 keys, the third 3 keys so the third has the best stuff.
 
----
-
 **Q: What rewards are in each chest?**
 
 > Chest 1 gives 50-100 points. Chest 2 gives 150-200 points. Chest 3 gives 250-300 points.
-
----
 
 **Q: How does the Wheel of Fortune work?**
 
 > You roll a 12-sided die.
 
----
-
 **Q: Is there anything else about how turns work?**
 
 > Each player gets 3 actions on their turn. An action is either answering a question, buying something in the shop, opening a chest, or spinning the wheel of fortune.
 
----
-
 From this conversation, Claude Code generated a complete implementation plan and then built the entire game - HTML structure, CSS styling, and JavaScript game logic - all in one session.
+
+---
 
 ## Credits
 
